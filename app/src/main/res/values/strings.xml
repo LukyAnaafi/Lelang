@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">LelangApps</string>
+    <string name="title_activity_navigation">LuckAuction</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <!-- Apps Lelang -->
+    <string name="your_profil">Your Profil</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="telp">Number Handphone</string>
+    <string name="register">Register</string>
+    <string name="new_lelang_item">New Item</string>
+    <string name="discover">Discover</string>
+    <string name="best_apps_auction">Best Auction Apps</string>
+    <string name="see_detail">See Detail</string>
+    <string name="auction_time_ends">Auction time ends</string>
+    <string name="swipe_all">Swipe to see all!</string>
+    <string name="open_start">Open Price</string>
+    <string name="high_bid">Highest Bid</string>
+    <string name="auction">Auction</string>
+    <string name="add_item_auction">Add Item Auction</string>
+    <string name="sold">Sold</string>
+    <string name="sold_description">The auction session is over and the auction is won by the user :</string>
+
+
+    <!-- Text Register & Login -->
+    <string name="login">Login</string>
+    <string name="insert_name">Name</string>
+    <string name="insert_email">Email</string>
+    <string name="insert_telp">Number handphone</string>
+    <string name="insert_password">Password</string>
+    <string-array name="user_role">
+        <item>administrator</item>
+        <item>staff</item>
+    </string-array>
+
+
+    <!-- Staff Auction -->
+    <string name="choose_image">Choose Image</string>
+    <string name="item_name">Item Name</string>
+    <string name="open_price">Open Price</string>
+    <string name="description_item">Item Description</string>
+    <string name="date_close_auction">Date Close Auction</string>
+
+
+</resources>

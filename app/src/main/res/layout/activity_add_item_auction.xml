@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.profil.staff.AddItemAuctionActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            >
+
+            <TextView
+                android:id="@+id/text_view_add_item_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_item_auction"
+                android:textSize="@dimen/_20ssp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/calm_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_add_item_auction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/text_view_add_item_header">
+
+                <TextView
+                    android:id="@+id/text_view_choose_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/choose_image"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/calm_black"
+                    android:fontFamily="@font/montserrat_light"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="280dp"
+                    android:layout_height="230dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/image_insert_auction"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                           />
+
+                        <TextView
+                            android:id="@+id/text_view_no_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No Image"
+                            android:textSize="14sp"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/calm_black"
+                            android:fontFamily="@font/montserrat_light"/>
+
+                    </RelativeLayout>
+
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_add_image"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    app:strokeWidth="0.8dp"
+                    android:textSize="8sp"
+                    app:cornerRadius="6dp"
+                    android:layout_marginTop="5dp"
+                    android:textAllCaps="false"
+                    app:strokeColor="@color/dark_pink"
+                    android:textColor="@color/dark_pink"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="Add Image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/relative_layout_image_profil"
+                    />
+
+                <TextView
+                    android:id="@+id/text_view_add_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/item_name"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/calm_black"
+                    android:fontFamily="@font/montserrat_light"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/dark_pink"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    app:hintEnabled="false">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_add_item_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="item name..."
+                        android:textColor="@color/dark_grey"
+                        android:fontFamily="@font/montserrat_light"
+                        android:textSize="14sp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/text_view_add_description_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description_item"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/calm_black"
+                    android:fontFamily="@font/montserrat_light"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/dark_pink"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    app:hintEnabled="false">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_add_description_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="5"
+                        android:gravity="start"
+                        android:hint="description item..."
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:textColor="@color/dark_grey"
+                        android:fontFamily="@font/montserrat_light"
+                        android:maxLength="2000"
+                        android:maxLines="4"
+                        android:textSize="14sp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/text_view_add_open_price_auction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/open_price"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/calm_black"
+                    android:fontFamily="@font/montserrat_light"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxCornerRadiusBottomEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxStrokeColor="@color/dark_pink"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    app:hintEnabled="false">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_text_add_open_price_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/dark_grey"
+                        android:hint="price item"
+                        android:fontFamily="@font/montserrat_light"
+                        android:textSize="14sp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/text_view_add_date_closed_auction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date_close_auction"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/calm_black"
+                    android:fontFamily="@font/montserrat_light"/>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        app:boxCornerRadiusBottomEnd="8dp"
+                        app:boxCornerRadiusBottomStart="8dp"
+                        app:boxCornerRadiusTopEnd="8dp"
+                        app:boxCornerRadiusTopStart="8dp"
+                        app:boxStrokeColor="@color/dark_pink"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        app:hintEnabled="false">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_text_add_date_closed"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/dark_grey"
+                            android:hint="date"
+                            android:fontFamily="@font/montserrat_light"
+                            android:textSize="14sp"/>
+
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/btn_date_picek_auction_closed"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_39sdp"
+                        app:cardCornerRadius="8dp"
+                        android:layout_marginLeft="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_toRightOf="@id/input_layout_date"
+                        >
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_calendar"
+                                android:layout_centerInParent="true"/>
+
+                        </RelativeLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_add_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Item"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    app:cornerRadius="@dimen/_12sdp"
+                    android:layout_marginBottom="14dp"
+                    android:textAllCaps="false"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/montserrat_regular"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linear_layout_insert_password"/>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

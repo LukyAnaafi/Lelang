@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profil.ProfilFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_image_profil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginLeft="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_view_image_profil"
+                    android:layout_width="@dimen/_55sdp"
+                    android:layout_height="@dimen/_55sdp"
+                    app:cardCornerRadius="35dp"
+                    app:cardBackgroundColor="@color/dark_grey">
+
+                    <TextView
+                        android:id="@+id/tv_name_inisial"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/dark_pink"
+                        android:text="B"
+                        android:gravity="center"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="23sp"/>
+
+
+                    <ImageView
+                        android:id="@+id/image_view_profil"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/text_view_welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Welcome"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/dark_pink"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_toRightOf="@id/card_view_image_profil"
+                    />
+
+                <TextView
+                    android:id="@+id/text_view_welcome_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Name"
+                    android:textSize="@dimen/_20ssp"
+                    android:layout_marginLeft="@dimen/_12sdp"
+                    android:textColor="@color/calm_black"
+                    android:layout_below="@id/text_view_welcome"
+                    android:layout_toRightOf="@id/card_view_image_profil"/>
+            </RelativeLayout>
+
+
+
+
+            <TextView
+                android:id="@+id/text_view_heading_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_profil"
+                android:fontFamily="@font/montserrat_medium"
+                android:textSize="@dimen/_20ssp"
+                android:textColor="@color/dark_pink"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/relative_layout_image_profil"/>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_name_profil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                app:layout_constraintTop_toBottomOf="@id/text_view_heading_name">
+
+                <TextView
+                    android:id="@+id/text_view_profil_text_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:textColor="@color/calm_black"
+                    android:textSize="@dimen/_12ssp"
+                    android:gravity="left"
+                    android:fontFamily="@font/montserrat_light"/>
+
+                <TextView
+                    android:id="@+id/text_view_name_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/montserrat_light"
+                    android:gravity="right"
+                    android:textColor="@color/calm_black"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="Hennry"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                app:layout_constraintTop_toBottomOf="@id/linear_layout_name_profil">
+
+                <TextView
+                    android:id="@+id/text_view_profil_text_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:textColor="@color/calm_black"
+                    android:textSize="@dimen/_12ssp"
+                    android:gravity="left"
+                    android:fontFamily="@font/montserrat_light"/>
+
+                <TextView
+                    android:id="@+id/text_view_email_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/montserrat_light"
+                    android:gravity="right"
+                    android:textColor="@color/calm_black"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="Hennry@gmail.com"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_telp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                app:layout_constraintTop_toBottomOf="@id/linear_layout_email">
+
+                <TextView
+                    android:id="@+id/text_view_profil_text_telp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/telp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:textColor="@color/calm_black"
+                    android:textSize="@dimen/_12ssp"
+                    android:gravity="left"
+                    android:fontFamily="@font/montserrat_light"/>
+
+                <TextView
+                    android:id="@+id/text_view_telp_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/montserrat_light"
+                    android:gravity="right"
+                    android:textColor="@color/calm_black"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="0889 8785 8123"/>
+
+            </LinearLayout>
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textColor="@color/dark_pink"
+        app:strokeColor="@color/dark_pink"
+        android:layout_marginTop="@dimen/_16sdp"
+        app:cornerRadius="10dp"
+        android:textAllCaps="false"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        app:strokeWidth="1dp"
+        android:backgroundTint="@color/white"
+        android:layout_gravity="end"
+        android:fontFamily="@font/montserrat_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_telp"
+        />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_to_admin_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Admin Page"
+                android:paddingVertical="16dp"
+                android:paddingHorizontal="20dp"
+                android:textColor="@color/dark_pink"
+                app:strokeColor="@color/dark_pink"
+                android:layout_marginTop="10dp"
+                app:cornerRadius="10dp"
+                android:textAllCaps="false"
+                app:strokeWidth="1dp"
+                app:iconTint="@color/dark_pink"
+                app:icon="@drawable/ic_right_24"
+                app:iconGravity="textEnd"
+                app:iconSize="18dp"
+                app:iconPadding="10dp"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:backgroundTint="@color/white"
+                android:layout_gravity="start"
+                android:fontFamily="@font/montserrat_regular"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_add_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Item Auction"
+                android:textColor="@color/dark_pink"
+                app:strokeColor="@color/dark_pink"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:cornerRadius="@dimen/_12sdp"
+                android:textAllCaps="false"
+                app:strokeWidth="1dp"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:backgroundTint="@color/white"
+                android:layout_gravity="end"
+                android:fontFamily="@font/montserrat_regular"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_edit_profile"
+                />
+
+            <TextView
+                android:id="@+id/btn_logout"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:layout_width="wrap_content"
+                android:text="Log Out"
+                android:layout_marginBottom="50dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

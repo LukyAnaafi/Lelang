@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:icon="@drawable/home"
+        android:title="Dashboard" />
+
+    <item
+        android:id="@+id/navigation_auction"
+        android:icon="@drawable/auction"
+        android:title="Auction" />
+
+    <item
+        android:id="@+id/navigation_transaction"
+        android:icon="@drawable/money_transfer"
+        android:title="Transaction" />
+
+    <item
+        android:id="@+id/navigation_profil"
+        android:icon="@drawable/person_244"
+        android:title="Profil" />
+
+</menu>

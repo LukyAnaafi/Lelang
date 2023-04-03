@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="14dp"
+    android:elevation="12dp"
+    android:layout_marginHorizontal="2dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/material_card_view_item_auction"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        app:cardCornerRadius="8dp"
+        android:elevation="18dp"
+        app:cardElevation="18dp"
+        app:strokeWidth="0.5dp"
+        app:strokeColor="@color/dark_pink"
+        android:layout_marginRight="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="12dp"
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_item_auction"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="@color/dark_grey">
+
+                <ImageView
+                    android:id="@+id/image_view_item_auction"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/pit_image"
+                   />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/text_view_name_item_auction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sepeda Racing"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/calm_black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/relative_layout_item_auction"/>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_open_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_name_item_auction"
+                android:layout_marginLeft="4dp"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/text_view_open_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/open_start"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="8sp"
+                    android:textColor="@color/dark_pink"/>
+
+                <TextView
+                    android:id="@+id/text_view_open_price_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 20.000.00"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="13sp"
+                    android:textColor="@color/calm_black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_newwest_bid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_layout_open_price"
+                android:layout_marginLeft="4dp"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/text_view_open_bid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/high_bid"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="8sp"
+                    android:textColor="@color/dark_pink"/>
+
+                <TextView
+                    android:id="@+id/text_view_highest_bid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp. 20.000.00"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textSize="13sp"
+                    android:textColor="@color/calm_black"/>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

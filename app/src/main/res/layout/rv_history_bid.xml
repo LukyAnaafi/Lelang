@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/relative_layout_history"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+        <TextView
+            android:id="@+id/text_view_title_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ronaldo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_toStartOf="@id/text_view_bid_history"
+            app:layout_constraintEnd_toStartOf="@id/text_view_bid_history"
+            android:fontFamily="@font/montserrat_light"
+            android:textColor="@color/calm_black"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/text_view_bid_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rp. 500000"
+            android:gravity="end"
+            android:layout_alignParentEnd="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:fontFamily="@font/montserrat_light"
+            android:textColor="@color/calm_black"
+            android:textSize="14sp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.lelangapps.ui.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_auction"
+        android:name="com.example.lelangapps.ui.auction.AuctionFragment"
+        android:label="Auction"
+        tools:layout="@layout/fragment_auction" />
+
+    <fragment
+        android:id="@+id/navigation_transaction"
+        android:name="com.example.lelangapps.ui.transaction.TransactionsFragment"
+        android:label="Transaction"
+        tools:layout="@layout/fragment_transaction" />
+
+    <fragment
+        android:id="@+id/navigation_profil"
+        android:name="com.example.lelangapps.ui.profil.ProfilFragment"
+        android:label="Profil"
+        tools:layout="@layout/fragment_profil" />
+</navigation>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profil.admin.AdminActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/material_card_view_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardBackgroundColor="@color/dark_pink"
+        app:cardCornerRadius="0dp"
+        >
+
+        <TextView
+            android:id="@+id/text_view_admin_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Admin Page"
+            android:textSize="16sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginVertical="14dp"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/material_card_view_app_bar"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:paddingTop="8dp"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/material_card_view_total_item"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="12sp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view_image_total_item"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="13dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardBackgroundColor="@color/dark_grey"
+                        android:layout_marginLeft="14dp"
+                        android:layout_alignParentLeft="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/text_view_total_item_in_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Generate Report"
+                        android:layout_toRightOf="@id/card_view_image_total_item"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/calm_black"
+                        android:layout_marginLeft="14dp"/>
+
+                    <TextView
+                        android:id="@+id/text_view_value_total_item"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/calm_black"
+                        android:layout_below="@id/text_view_total_item_in_top"
+                        android:layout_toRightOf="@id/card_view_image_total_item"/>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/material_card_view_live_auction"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="12sp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/material_card_view_total_item"
+                android:layout_marginTop="12dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view_image_live_auction"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="13dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardBackgroundColor="@color/dark_grey"
+                        android:layout_marginLeft="14dp"
+                        android:layout_alignParentLeft="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/text_view_live_auction_in_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Live Auction"
+                        android:layout_toRightOf="@id/card_view_image_live_auction"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/calm_black"
+                        android:layout_marginLeft="14dp"/>
+
+                    <TextView
+                        android:id="@+id/text_view_value_live_auction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/calm_black"
+                        android:layout_below="@id/text_view_live_auction_in_top"
+                        android:layout_toRightOf="@id/card_view_image_live_auction"/>
+
+                </RelativeLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/material_card_view_item_sold"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="12sp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/material_card_view_live_auction"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view_image_item_sold"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="13dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardBackgroundColor="@color/dark_grey"
+                        android:layout_marginLeft="14dp"
+                        android:layout_alignParentLeft="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/text_view_item_sold_in_top"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User"
+                        android:layout_toRightOf="@id/card_view_image_item_sold"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/calm_black"
+                        android:layout_marginLeft="14dp"/>
+
+                    <TextView
+                        android:id="@+id/text_view_value_total_item_sold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/calm_black"
+                        android:layout_below="@id/text_view_item_sold_in_top"
+                        android:layout_toRightOf="@id/card_view_image_item_sold"/>
+
+                </RelativeLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/material_card_view_total_user"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="12sp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/material_card_view_item_sold"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view_image_total_user"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="13dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardBackgroundColor="@color/dark_grey"
+                        android:layout_marginLeft="14dp"
+                        android:layout_alignParentLeft="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/text_view_total_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="User"
+                        android:layout_toRightOf="@id/card_view_image_total_user"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/calm_black"
+                        android:layout_marginLeft="14dp"/>
+
+                    <TextView
+                        android:id="@+id/text_view_value_total_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/calm_black"
+                        android:layout_below="@id/text_view_total_user"
+                        android:layout_toRightOf="@id/card_view_image_total_user"/>
+
+                </RelativeLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/material_card_view_total_staff"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="12sp"
+                android:layout_marginTop="10dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/material_card_view_item_sold"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view_image_total_staff"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_marginTop="13dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardBackgroundColor="@color/dark_grey"
+                        android:layout_marginLeft="14dp"
+                        android:layout_alignParentLeft="true">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/text_view_total_staff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Admin and Staff"
+                        android:layout_toRightOf="@id/card_view_image_total_staff"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="20dp"
+                        android:textSize="20sp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/calm_black"
+                        android:layout_marginLeft="14dp"/>
+
+                    <TextView
+                        android:id="@+id/text_view_value_total_staff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:layout_marginLeft="14dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/calm_black"
+                        android:layout_below="@id/text_view_total_staff"
+                        android:layout_toRightOf="@id/card_view_image_total_staff"/>
+
+                    <TextView
+                        android:id="@+id/text_button_create_staff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginEnd="14dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textSize="14sp"
+                        android:textColor="@color/calm_blue"/>
+
+
+                </RelativeLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

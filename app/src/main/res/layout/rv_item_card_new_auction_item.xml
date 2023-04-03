@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/card_view_new_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="430dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="18dp"
+    android:layout_margin="14dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout_for_item_auction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/image_new_item_auction"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/bmw_images"
+            android:scaleType="centerCrop"/>
+
+        <!--<com.google.android.material.button.MaterialButton
+            android:id="@+id/button_see_detail_in_card_new_item"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:cornerRadius="18dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/dark_pink"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/dark_pink"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            android:text="@string/see_detail"/>-->
+
+        <TextView
+            android:id="@+id/text_view_name_item_in_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name new item Auctionnnnnnnnnnnnnnnnn"
+            android:textSize="20sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/calm_black"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_new_item_auction"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="18dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/high_bid"
+                android:textSize="14sp"
+                android:layout_gravity="start"
+                android:fontFamily="@font/montserrat_light"
+                android:textColor="@color/calm_blue"/>
+
+            <TextView
+                android:id="@+id/highest_bid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginLeft="14dp"
+                android:fontFamily="@font/montserrat_light"
+                android:text="Rp 20.000"
+                android:textColor="@color/calm_black"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/transparant1"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:strokeWidth="1dp"
+            android:layout_margin="@dimen/_12sdp"
+            app:strokeColor="@color/dark_pink"
+            android:layout_marginLeft="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="6dp"
+                >
+
+                <TextView
+                    android:id="@+id/text_view_auction_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:08:52"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:layout_gravity="center"
+                    android:textColor="@color/dark_pink"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

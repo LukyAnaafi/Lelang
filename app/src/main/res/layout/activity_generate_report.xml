@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="10dp"
+    tools:context=".ui.profil.admin.generatereport.GenerateReportActivity">
+
+    <TextView
+        android:id="@+id/text_view_generate_report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Generate Report"
+        android:textSize="18sp"
+        android:fontFamily="@font/montserrat_medium"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_title_generate_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_generate_report">
+
+        <TextView
+            android:id="@+id/text_view_id_user"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:text="IdUser"
+            android:textSize="12sp"
+            android:layout_gravity="end"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_light"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Name User"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_light"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Name Item"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_light"/>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_light"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat_light"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linear_layout_title_generate_report"
+        tools:listitem="@layout/rv_generate_report"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

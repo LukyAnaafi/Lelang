@@ -9,5 +9,7 @@ import com.example.lelangapps.data.source.remote.request.UpdateProfilRequest
 
 class UpdateUserViewModel(val repo : AppRepository) : ViewModel() {
 
-    fun updateUser(data : UpdateProfilRequest) = repo.update(data).asLiveData()
+    //fun updateUser(data : UpdateProfilRequest) = repo.update(data).asLiveData()
+
+    fun updateProfil(id : Int,data : UpdateProfilRequest) = repo.updateProfilUser(id,data).asLiveData()
 }

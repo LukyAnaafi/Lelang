@@ -12,6 +12,7 @@ import com.example.lelangapps.data.source.remote.response.ItemAucResponse
 import com.example.lelangapps.databinding.ActivityAdminBinding
 import com.example.lelangapps.ui.profil.admin.generatereport.GenerateReportActivity
 import com.example.lelangapps.ui.profil.admin.registeradmin.RegisterAdminActivity
+import com.example.lelangapps.ui.profil.admin.seeItemAuction.ListItemAuctionActivity
 import com.example.lelangapps.ui.profil.admin.seeUser.SeeAllUserActivity
 import com.inyongtisto.myhelper.extension.extra
 
@@ -37,6 +38,10 @@ class AdminActivity : AppCompatActivity() {
 
         binding.materialCardViewTotalItem.setOnClickListener {
             startActivity(Intent(this, GenerateReportActivity::class.java))
+        }
+
+        binding.materialCardViewLiveAuction.setOnClickListener {
+            startActivity(Intent(this, ListItemAuctionActivity::class.java))
         }
 
         binding.apply {

@@ -19,6 +19,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ui.profil.admin.seeItemAuction.ListItemAuctionActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.profil.admin.generatereport.GenerateReportActivity"
             android:exported="false" />
         <activity

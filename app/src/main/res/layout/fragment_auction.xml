@@ -34,39 +34,65 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/input_layout_item_search"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_view_auction"
-                app:boxCornerRadiusBottomEnd="18dp"
-                app:boxCornerRadiusBottomStart="18dp"
-                app:boxCornerRadiusTopEnd="18dp"
-                app:boxCornerRadiusTopStart="18dp"
-                app:hintEnabled="false"
-                app:endIconDrawable="@drawable/ic_search"
-                app:endIconTint="@color/dark_grey"
-                app:endIconMode="custom"
-                android:layout_marginTop="12dp"
-                >
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                android:id="@+id/input_layout_item_search"-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/text_view_auction"-->
+<!--                app:boxCornerRadiusBottomEnd="18dp"-->
+<!--                app:boxCornerRadiusBottomStart="18dp"-->
+<!--                app:boxCornerRadiusTopEnd="18dp"-->
+<!--                app:boxCornerRadiusTopStart="18dp"-->
+<!--                app:hintEnabled="false"-->
+<!--                app:endIconDrawable="@drawable/ic_search"-->
+<!--                app:endIconTint="@color/dark_grey"-->
+<!--                app:endIconMode="custom"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                >-->
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edit_text_search_item_search"
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/edit_text_search_item_search"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:backgroundTint="@color/white"-->
+<!--                    android:fontFamily="@font/montserrat_regular"-->
+<!--                    android:hint="Search items here..."-->
+<!--                    android:imeOptions="actionSearch"-->
+<!--                    android:inputType="text"-->
+<!--                    android:textColor="@color/dark_grey"-->
+<!--                    android:textSize="14sp"-->
+<!--                    />-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--            <com.google.android.material.card.MaterialCardView-->
+<!--                android:id="@+id/material_card_view_search"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:cardCornerRadius="16dp"-->
+<!--                app:cardUseCompatPadding="true"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/text_view_auction"-->
+<!--                app:flow_horizontalBias="0.5">-->
+
+                <SearchView
+                    android:id="@+id/search_view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:backgroundTint="@color/white"
-                    android:fontFamily="@font/montserrat_regular"
-                    android:hint="Search items here..."
-                    android:imeOptions="actionSearch"
-                    android:inputType="text"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="14sp"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_height="wrap_content"
+                    app:iconifiedByDefault="false"
+                    android:queryHint="Search item here"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/search_background"
+                    android:queryBackground="@android:color/transparent"
+                    app:layout_constraintTop_toBottomOf="@id/text_view_auction"
+                />
+         <!-- //  </com.google.android.material.card.MaterialCardView>-->
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view_items_auction"
@@ -76,7 +102,7 @@
                 android:paddingBottom="30dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/input_layout_item_search"
+                app:layout_constraintTop_toBottomOf="@id/search_view"
                 android:layout_marginTop="@dimen/_14sdp"
                 android:layout_marginBottom="80dp"
                 tools:listitem="@layout/rv_item_auction"/>

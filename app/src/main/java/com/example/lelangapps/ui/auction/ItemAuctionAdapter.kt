@@ -78,6 +78,11 @@ class ItemAuctionAdapter(
         notifyDataSetChanged()
     }
 
+    fun setFilteredList(mList : ArrayList<ItemsAuction>){
+        itemAuction = mList
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(RvItemAuctionBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }

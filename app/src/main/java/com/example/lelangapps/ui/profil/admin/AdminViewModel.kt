@@ -12,4 +12,6 @@ class AdminViewModel(val repoItem : ItemAuctionRepository,val authRepo : AppRepo
     fun registerAdmin() = repoItem.getCountItemAuction().asLiveData()
     fun getAllUser() = authRepo.getAllUser().asLiveData()
     fun generateReportItem() = repoItem.getItemAuction().asLiveData()
+    fun getItem() = repoItem.getItemAuction().asLiveData()
+    fun deleteItem(id_auction : Int) = repoItem.deleteAuctionItem(id_auction).asLiveData()
 }

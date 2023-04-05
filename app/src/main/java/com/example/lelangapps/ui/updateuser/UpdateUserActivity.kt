@@ -1,16 +1,20 @@
 package com.example.lelangapps.ui.updateuser
 
 import android.app.Activity
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import com.example.lelangapps.NavigationActivity
 import com.example.lelangapps.R
+import com.example.lelangapps.data.source.model.User
 import com.example.lelangapps.data.source.remote.network.State
 import com.example.lelangapps.data.source.remote.request.UpdateProfilRequest
 import com.example.lelangapps.databinding.ActivityUpdateUserBinding
+import com.example.lelangapps.ui.profil.ProfilViewModel
 import com.example.lelangapps.util.Prefs
 import com.github.drjacky.imagepicker.ImagePicker
 import com.github.drjacky.imagepicker.constant.ImageProvider
@@ -28,8 +32,59 @@ class UpdateUserActivity : AppCompatActivity() {
         binding =  ActivityUpdateUserBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setEditUser()
-        mainButtonUpdate()
+        setData()
+        mainButton()
+//        setEditUser()
+//        mainButtonUpdate()
+    }
+
+    private fun mainButton() {
+        binding.buttonSave.setOnClickListener {
+            updateProfil()
+        }
+    }
+
+    private fun updateProfil() {
+        if (binding.editInputTextName.isEmpty()) return
+        if (binding.editInputTextTelp.isEmpty()) return
+        if (binding.editInputTextEmail.isEmpty()) return
+
+        val id_user = Prefs.getUser()?.user?.id
+        val id = Prefs.getUser()?.user?.id
+        val body = UpdateProfilRequest(
+            name = binding.editInputTextName.text.toString(),
+            email = binding.editInputTextEmail.text.toString(),
+            telp = binding.editInputTextTelp.text.toString()
+        )
+
+        viewModel.updateProfil(Prefs.getUser()?.user?.id!!.toInt(),body).observe(this){
+            Log.e("Update",body.toString())
+            when (it.state) {
+                State.SUCCESS -> {
+                    binding.progressBarRegister.visibility = View.GONE
+                    showToast("Update Profil Success")
+                }
+                State.ERROR -> {
+                   binding.progressBarRegister.visibility = View.GONE
+                    toastError(it.message ?: "Error")
+                }
+                State.LOADING -> {
+                    binding.progressBarRegister.visibility = View.VISIBLE
+                }
+            }
+        }
+    }
+
+    private fun setData() {
+        val user = Prefs.getUser()
+        if (user != null) {
+            binding.apply {
+                editInputTextEmail.setText(user.user?.email)
+                editInputTextName.setText(user.user?.name)
+                editInputTextTelp.setText(user.user?.telp)
+                tvNameInisial.text = user.user?.name.getInitial()
+            }
+        }
     }
 
     private fun setEditUser() {
@@ -51,7 +106,7 @@ class UpdateUserActivity : AppCompatActivity() {
         }
 
         binding.buttonSave.setOnClickListener{
-            updateUser()
+           // updateUser()
         }
 
     }
@@ -73,38 +128,37 @@ class UpdateUserActivity : AppCompatActivity() {
             }
         }
 
-    private fun updateUser() {
-
-        if (binding.editInputTextName.isEmpty() ) return
-        if (binding.editInputTextEmail.isEmpty()) return
-        if (binding.editInputTextTelp.isEmpty()) return
-
-        val idUser = Prefs.getUser()?.user?.id
-        val body = UpdateProfilRequest(
-            idUser ?: 0,
-            name = binding.editInputTextName.text.toString(),
-            telp = binding.editInputTextTelp.text.toString(),
-            email = binding.editInputTextEmail.text.toString()
-        )
-
-        viewModel.updateUser(body).observe(this, {
-            when(it.state) {
-                State.SUCCESS -> {
-                    binding.progressBarRegister.visibility = View.GONE
-                    showToast("Edit Success")
-                    pushActivity(NavigationActivity::class.java)
-                    onBackPressedDispatcher.onBackPressed()
-                }
-                State.ERROR -> {
-                    binding.progressBarRegister.visibility = View.GONE
-                    toastError(it.message ?: "Error")
-                }
-                State.LOADING -> {
-                    binding.progressBarRegister.visibility = View.VISIBLE
-
-                }
-            }
-        })
-
-    }
+//    private fun updateUser() {
+//
+//        if (binding.editInputTextName.isEmpty() ) return
+//        if (binding.editInputTextEmail.isEmpty()) return
+//        if (binding.editInputTextTelp.isEmpty()) return
+//
+//        val idUser = Prefs.getUser()?.user?.id
+//        val body = UpdateProfilRequest(
+//            name = binding.editInputTextName.text.toString(),
+//            telp = binding.editInputTextTelp.text.toString(),
+//            email = binding.editInputTextEmail.text.toString()
+//        )
+//
+//        viewModel.updateProfil(body).observe(this, {
+//            when(it.state) {
+//                State.SUCCESS -> {
+//                    binding.progressBarRegister.visibility = View.GONE
+//                    showToast("Edit Success")
+//                    pushActivity(NavigationActivity::class.java)
+//                    onBackPressedDispatcher.onBackPressed()
+//                }
+//                State.ERROR -> {
+//                    binding.progressBarRegister.visibility = View.GONE
+//                    toastError(it.message ?: "Error")
+//                }
+//                State.LOADING -> {
+//                    binding.progressBarRegister.visibility = View.VISIBLE
+//
+//                }
+//            }
+//        })
+//
+//    }
 }

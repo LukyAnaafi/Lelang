@@ -3,11 +3,12 @@ package com.example.lelangapps.ui.profil
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
+import com.example.lelangapps.data.repository.AppRepository
+import com.example.lelangapps.data.source.remote.request.UpdateProfilRequest
 
-class ProfilViewModel : ViewModel() {
+class ProfilViewModel(val repo :AppRepository) : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is notifications Fragment"
-    }
-    val text: LiveData<String> = _text
+
+
 }

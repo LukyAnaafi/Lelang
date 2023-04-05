@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -13,6 +14,7 @@ import androidx.lifecycle.viewmodel.CreationExtras
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.lelangapps.R
 import com.example.lelangapps.data.source.model.ItemsAuction
 import com.example.lelangapps.data.source.remote.network.State
 import com.example.lelangapps.databinding.FragmentAuctionBinding
@@ -21,12 +23,16 @@ import com.inyongtisto.myhelper.extension.intentActivity
 import com.inyongtisto.myhelper.extension.isNull
 import com.inyongtisto.myhelper.extension.toastError
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import java.util.Locale
+
 
 
 class AuctionFragment : Fragment() {
 
     private var _binding: FragmentAuctionBinding? = null
     private val viewModel : AuctionViewModel by viewModel()
+    private val mList = ArrayList<ItemsAuction>()
+    private lateinit var search : SearchView
     private var itemAdapter = ItemAuctionAdapter{
         detailAuction(it)
     }
@@ -54,7 +60,20 @@ class AuctionFragment : Fragment() {
         setUpAdapter()
         getDataItem()
 
+        val sItem = ArrayList<ItemsAuction>()
 
+
+        /*binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(p0: String?): Boolean {
+                binding.searchView.clearFocus()
+                
+            }
+
+            override fun onQueryTextChange(p0: String?): Boolean {
+                TODO("Not yet implemented")
+            }
+
+        })*/
 
 
 
@@ -82,6 +101,23 @@ class AuctionFragment : Fragment() {
     override fun onResume() {
         getDataItem()
         super.onResume()
+    }
+
+    private fun filterList(query: String?) {
+        if (query != null){
+            val filteredList = ArrayList<ItemsAuction>()
+            for (i in mList) {
+                if (i.item.item_name!!.lowercase(Locale.ROOT).contains(query)){
+                    filteredList.add(i)
+                }
+            }
+
+            if (filteredList.isEmpty()) {
+                Toast.makeText(requireContext(),"No data found",Toast.LENGTH_SHORT).show()
+            } else {
+                itemAdapter.setFilteredList(filteredList)
+            }
+        }
     }
 
 

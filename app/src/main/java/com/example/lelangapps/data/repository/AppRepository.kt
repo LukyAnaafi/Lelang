@@ -99,25 +99,25 @@ class AppRepository(val local : LocalDataSource, val remote : RemoteDataSource) 
         }
     }
 
-    fun update(data : UpdateProfilRequest) = flow {
-        emit(Resource.loading(null))
-        try {
-            remote.updateUser(data).let {
-                if (it.isSuccessful){
-                    val body = it.body()
-                    val user = body?.data
-                    Prefs.setUser(user)
-                    emit(Resource.success(user))
-                }else {
-                    emit(Resource.error("Terjadi kesalahan",null))
-
-                }
-            }
-        }catch (e: Exception){
-            emit(Resource.error(e.message ?: "Terjadi kesalahan",null))
-
-        }
-    }
+//    fun update(data : UpdateProfilRequest) = flow {
+//        emit(Resource.loading(null))
+//        try {
+//            remote.updateUser(data).let {
+//                if (it.isSuccessful){
+//                    val body = it.body()
+//                    val user = body?.data
+//                    Prefs.setUser(user)
+//                    emit(Resource.success(user))
+//                }else {
+//                    emit(Resource.error("Terjadi kesalahan",null))
+//
+//                }
+//            }
+//        }catch (e: Exception){
+//            emit(Resource.error(e.message ?: "Terjadi kesalahan",null))
+//
+//        }
+//    }
 
     fun getAllUser() = flow {
         emit(Resource.loading(null))
@@ -133,6 +133,24 @@ class AppRepository(val local : LocalDataSource, val remote : RemoteDataSource) 
             }
         }catch (e : Exception) {
             emit(Resource.error(e.message.defaultError(),null))
+        }
+    }
+
+    fun updateProfilUser(id: Int,data : UpdateProfilRequest) = flow {
+        emit(Resource.loading(null))
+        try {
+            remote.updateProfil(id,data).let {
+                if (it.isSuccessful){
+                    val body = it.body()
+                    val user = body?.data
+                    Prefs.setUser(user)
+                    emit(Resource.success(user))
+                }else{
+                    emit(Resource.error(it.getErrorBody()?.message.defaultError(), null))
+                }
+            }
+        }catch (e : Exception){
+            emit(Resource.error(e.message ?: "Terjadi error", null) )
         }
     }
 

@@ -17,9 +17,10 @@ class RemoteDataSource(private val api : ApiService) {
     //Auth
     suspend fun login(data : LoginRequest) = api.login(data)
     suspend fun register(data : RegisterRequest) = api.register(data)
-    suspend fun updateUser(data : UpdateProfilRequest) = api.update(data.id, data)
+    //suspend fun updateUser(id : Int,data : UpdateProfilRequest) = api.update(id,data)
     suspend fun addStaff(data: RegisterRequest) = api.addStaff(data)
     suspend fun getAllUser() = api.getAllUser()
+    suspend fun updateProfil(id: Int,data : UpdateProfilRequest) = api.updateUser(id,data)
 
     //Item Auction
     suspend fun createItemAuc(
@@ -43,6 +44,7 @@ class RemoteDataSource(private val api : ApiService) {
     suspend fun bidAuction(data : BidRequest) = api.bidAuction(data)
     suspend fun getHistoryBidItem(id_auction : Int) = api.getBidHistoryItem(id_auction)
     suspend fun getCountItemAuc() = api.getCountItemAuc()
+    suspend fun deleteAuctionItem(id_auction: Int) = api.deleteAuctionItem(id_auction)
 
 
 }

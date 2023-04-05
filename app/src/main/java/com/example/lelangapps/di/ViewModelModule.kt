@@ -3,6 +3,7 @@ package com.example.lelangapps.di
 import com.example.lelangapps.ui.auction.AuctionViewModel
 import com.example.lelangapps.ui.dashboard.DashboardViewModel
 import com.example.lelangapps.ui.login.LoginViewModel
+import com.example.lelangapps.ui.profil.ProfilViewModel
 import com.example.lelangapps.ui.profil.admin.AdminViewModel
 import com.example.lelangapps.ui.profil.admin.registeradmin.RegisterAdminViewModel
 import com.example.lelangapps.ui.profil.staff.AddItemAuctionActivity
@@ -21,4 +22,5 @@ val viewModelModule = module {
     viewModel { DashboardViewModel(get())}
     viewModel { RegisterAdminViewModel(get())}
     viewModel { AdminViewModel(get(),get())}
+    viewModel { ProfilViewModel(get())}
 }
